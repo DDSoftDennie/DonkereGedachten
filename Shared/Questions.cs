@@ -9,7 +9,7 @@ namespace BlazorApp.Shared
         private int _index;
         public List<Question> AllQuestions { get; private set; }
 
-        Questions()
+       public Questions()
         {
             _index = 0;
             AllQuestions = new List<Question>();

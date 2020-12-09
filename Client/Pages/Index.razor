@@ -1,3 +1,16 @@
 ﻿@page "/"
-
 <h1>Donkere Gedachten</h1>
+
+<img src=""/>
+
+@{ 
+    Questions questions = new Questions();
+    string path = "~/Cards/";
+    for (int i = 1; i < 39; i++)
+    {
+        questions.Add(new Question { Number = 1, Path = path });
+    }
+    string Q1 = questions.Next().File.ToString();
+
+}
+@Q1

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace BlazorApp.Shared
@@ -10,7 +11,7 @@ namespace BlazorApp.Shared
 
         public string Path { get; set; }
 
-        public string File { get; }
+        public string File => this.Path + Number + ".png";
 
 
     }
