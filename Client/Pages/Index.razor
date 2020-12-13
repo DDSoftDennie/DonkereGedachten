@@ -2,21 +2,18 @@
 @code
 {
     //INIT
-    private int _questionNumber = 0;
     private Question _question = null;
     private QuestionRepository _questions = new QuestionRepository();
-    //  private string _file = "";
 
-    private void Next()
+    private void NextQuestion()
     {
-
-        _question = _questions.NextQuestion(_questionNumber);
-        _questionNumber = _question.Number;
+        _question = _questions.NextQuestion();
     }
+
 }
 
 @{
-    _question = _questions.ShowQuestion(_questionNumber);
+    _question = _questions.ShowQuestion();
 }
 <h1>Donkere Gedachten</h1>
 
@@ -24,7 +21,9 @@
 <br />
 <hr />
 <br />
-<button @onclick="Next">Volgende</button>
+<button class="btn-primary" @onclick="NextQuestion">Volgende</button>
+
+
 
 
 
