@@ -1,54 +1,35 @@
 ﻿@page "/"
-<h1>Donkere Gedachten</h1>
-@{ 
-
-}
-
 @code
 {
     //INIT
-    private string path = "/Cards/";
-    private int QuestionNumber = 0;
-    private  Question Q = null;
-    private  Questions questions = new Questions();
-    private string file = "";
-}
+    private int _questionNumber = 0;
+    private Question _question = null;
+    private QuestionRepository _questions = new QuestionRepository();
+    //  private string _file = "";
 
-
-
-    @for(int i = 1; i<39; i++)
+    private void Next()
     {
-        questions.Add(new Question
-        {
-            Number = i,
-            Path = path
-        });
-    }
 
-@{ 
-    Q = questions.AllQuestions[QuestionNumber];
-    file = Q.File.ToString();
+        _question = _questions.NextQuestion(_questionNumber);
+        _questionNumber = _question.Number;
+    }
 }
 
+@{
+    _question = _questions.ShowQuestion(_questionNumber);
+}
+<h1>Donkere Gedachten</h1>
 
- 
-
-<img src="@file" />
+<img src="@_question.File.ToString()" class="Image" />
 <br />
 <hr />
 <br />
-<button>Volgende</button>
+<button @onclick="Next">Volgende</button>
 
 
 
 
 
-@*@{
-    void Next(int Old)
-    {
-        QuestionNumber = Old;
-        Q = questions.ShowQuestion(QuestionNumber);
-        QuestionNumber += 1;
-    }
-}*@
+
+
 
