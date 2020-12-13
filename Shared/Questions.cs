@@ -11,7 +11,7 @@ namespace BlazorApp.Shared
 
        public Questions()
         {
-            _index = 0;
+         //   _index = 0;
             AllQuestions = new List<Question>();
         }
 
@@ -20,10 +20,10 @@ namespace BlazorApp.Shared
             AllQuestions.Add(q);
         }
 
-        public Question Next()
+        public Question Next(int index)
         {
-            _index += 1;
-            Question q = AllQuestions[_index];
+            index += 1;
+            Question q = AllQuestions[index];
             return q;
         }
 
