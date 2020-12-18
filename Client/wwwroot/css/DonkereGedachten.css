@@ -4,5 +4,21 @@
 
 .Image{
     width: 500px;
-    height: 250px;
 }
+.DDFooter {
+    background-color: darkred;
+    color: white;
+    text-align: center;
+}
+.DDFooter a{
+    color: white;
+    text-decoration:solid;
+    font-weight:bold;
+}
+.DDFooter a:hover{
+    color: yellow;
+}
+    .DDFooter a:visited {
+        color: white;
+        text-decoration: solid;
+    }
