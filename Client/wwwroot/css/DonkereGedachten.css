@@ -10,6 +10,7 @@
     color: white;
     text-align: center;
 }
+
 .DDFooter a{
     color: white;
     text-decoration:solid;
@@ -22,3 +23,73 @@
         color: white;
         text-decoration: solid;
     }
+
+
+
+@media only screen and (max-width: 500px) {
+    /* For mobile phones */
+    .Image {
+        width: 350px;
+    }
+
+    .DDFooter {
+        background-color: darkred;
+        color: white;
+        text-align: center;
+        justify-content: flex-end;
+    }
+    .navbar-toggler {
+        display: none;
+    }
+
+    .sidebar {
+        width: 0;
+    }
+
+        .sidebar .collapse {
+            display: none;
+        }
+
+    .navbar .collapse {
+        width: 0;
+    }
+
+
+}
+
+@media only screen and (max-height: 300px) {
+    /* For mobile phones */
+    .Image {
+        height: 150px;
+        width: auto;
+    }
+
+    .DDFooter {
+        background-color: darkred;
+        color: white;
+        text-align: center;
+        justify-content: flex-end;
+    }
+    .navbar-toggler {
+        display:none;
+    }
+
+    .sidebar{
+  
+        width: 0;
+    }
+
+        .sidebar .collapse {
+          
+            display:none;
+        }
+
+    .navbar .collapse{
+        width:0;
+    }
+
+    .BottomMenu {
+        visibility: visible;
+    }
+}
+
